@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <h1>The Odin Project Public Library</h1>
+        <div id="container">
+            <div id="content">
+                <h2>Add to your library</h2>
+                <div id="input">
+                    <div class="inputElement" id="titleInput">
+                        <label>Title</label>
+                        <input type="text" id="title" value="Green Eggs and Ham">
+                    </div>
+                    <div class="inputElement" id="authorInput">
+                        <label>Author</label>
+                        <input type="text" id="author" value="Dr. Seuss">
+                    </div>
+                    <div class="inputElement" id="statusInput">
+                        <label>Status</label>
+                        <select name="status" id="status">
+                            <option value="Read">Read</option>
+                            <option value="Not Read">Not read</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputElement">
+                    <button class="btn submit" onclick="addBookToLibrary()">Submit</button>
+                </div>
+
+
+                <h2>In your library</h2>
+                <table id="library">
+                    <tr>
+                        <th id="title">Title</th>
+                        <th id="author">Author</th>
+                        <th id="status">Status</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
