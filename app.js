@@ -20,9 +20,12 @@ let library = JSON.parse(localStorage.getItem("library"));
 // console.log(library);
 
 function init() {
-    if (library === null || library.length < 1) {
-        localStorage.setItem('library', JSON.stringify(defaultLibrary));
-    };
+    if (localStorage.getItem("init") == null) {
+      if (library === null || library.length < 1) {
+        localStorage.setItem("library", JSON.stringify(defaultLibrary));
+      }
+    }
+    localStorage.setItem("init", true);
     populateLibrary();
 };
 
@@ -87,10 +90,4 @@ function populateLibrary() {
     }
 }
 
-window.onload = function() {
-  if (localStorage.getItem('init') == null) {
-    init();
-  }
-  // console.log(localStorage.getItem('init'))
-  localStorage.setItem('init', true);
-}
+window.onload = init();
