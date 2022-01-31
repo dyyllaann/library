@@ -39,10 +39,23 @@ class Book {
 };
 
 function addBookToLibrary() {
-    let x = new Book();
-    library.push(x);
-    commit();
-    populateLibrary();
+  const title = document.getElementById("title");
+  const author = document.getElementById("author");
+
+  // Validation
+  if (!title.value) {
+		return (document.getElementById("title").placeholder =
+			"Must enter valid title.");
+	} else 
+  if (!author.value) {
+		return (document.getElementById("author").placeholder =
+			"Must enter valid author.");
+	}
+
+  let x = new Book();
+  library.push(x);
+  commit();
+  populateLibrary();
 };
 
 function removeFromLibrary(i) {
