@@ -15,7 +15,11 @@ h2 {
     padding-top: 10%;
 }
 
-th {
+table {
+    width: 100%;
+}
+
+th {width: 25%;
     padding: 10px 0;
     margin: 0;
     text-align: left;
@@ -43,6 +47,7 @@ tr {
     border-radius: 5px;
     border: 0px;
     cursor: pointer;
+    padding: 0;
 }
 
 button.submit {
@@ -69,7 +74,7 @@ button.deleteBtn {
 }
 
 #container {
-    width: 66%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
 }
@@ -83,6 +88,8 @@ button.deleteBtn {
     position: relative;
     overflow: auto;
     padding-bottom: 20px;
+    flex-flow:row wrap;
+    display: flex;
 }
 
 label {
@@ -92,6 +99,9 @@ label {
 
 .inputElement {
     float: left;
+    margin-top: 5px;
+    margin-right:5px;
+    min-width:100px;
 }
 
 #titleInput {
@@ -105,7 +115,7 @@ label {
 }
 
 #statusInput {
-    width: 15%;
+    width: 10%;
     padding: 0;
 }
 
