@@ -17,7 +17,6 @@ let defaultLibrary = [
 ];
 
 let library = JSON.parse(localStorage.getItem("library"));
-// console.log(library);
 
 function init() {
     if (localStorage.getItem("init") == null) {
@@ -31,10 +30,12 @@ function init() {
 
 const commit = () => localStorage.setItem("library", JSON.stringify(library));
 
-function Book(title, author, status) {
+class Book {
+  constructor(title, author, status) {
     this.title = document.getElementById("title").value,
     this.author = document.getElementById("author").value,
     this.status = document.getElementById("status").value
+  }
 };
 
 function addBookToLibrary() {
